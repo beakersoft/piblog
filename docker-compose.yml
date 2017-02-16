@@ -1,0 +1,12 @@
+version: "2.0"
+services:
+  blog:
+    ports:
+      - "80:2368"
+    build: . 
+    volumes:
+      - /mnt/blog_data/var/www/ghost/content/apps:/var/www/ghost/content/apps
+      - /mnt/blog_data/var/www/ghost/content/data:/var/www/ghost/content/data
+      - /mnt/blog_data/var/www/ghost/content/images:/var/www/ghost/content/images
+      - /mnt/blog_data/var/www/ghost/content/themes:/var/www/ghost/content/themes
+    restart: always
