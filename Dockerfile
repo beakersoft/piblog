@@ -7,7 +7,7 @@ WORKDIR /var/www/ghost/
 RUN apt-get -qy update && \
     apt-get -qy install --no-install-recommends \
      curl ca-certificates unzip && \
-     curl -sSLO https://github.com/TryGhost/Ghost/releases/download/0.11.3/Ghost-0.11.3.zip 
+     curl -sSLO https://github.com/TryGhost/Ghost/releases/download/0.11.3/Ghost-0.11.3.zip && \
      rm -rf /var/lib/apt/lists/* && \
      unzip Ghost-0.11.3.zip
 
